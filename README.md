@@ -2,6 +2,8 @@
 
 This project is a simple web application that generates random passwords based on user-selected criteria. Users can specify the length of the password and choose to include letters, numbers, and special characters.
 
+<img width="1280" alt="image" src="https://github.com/user-attachments/assets/c7d846ee-24f2-4669-8c7c-339a908b7060" />
+
 ## Features
 
 - Generate random passwords with customizable length.
