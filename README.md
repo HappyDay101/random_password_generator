@@ -16,7 +16,7 @@ This project is a simple web application that generates random passwords based o
 
 ## Usage
 
-1. Open `index.html` in your web browser.
+1. Open https://keepmesecurerandomly.netlify.app/
 2. Enter the desired password length in the input field.
 3. Select the character types to include (letters, numbers, special characters).
 4. Click the "Generate Password" button to generate two random passwords.
