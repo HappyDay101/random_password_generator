@@ -48,3 +48,36 @@ function generatePassword(length) {
   }
   return password;
 }
+
+// rendering password to screen
+function renderPassword() {
+  passElOne.textContent = '';
+  passElTwo.textContent = '';
+
+  // Remove existing copy buttons
+  let existingCopyBtnOne = passElOne.nextSibling;
+  if (existingCopyBtnOne && existingCopyBtnOne.tagName === "BUTTON") {
+      existingCopyBtnOne.remove();
+  }
+  let existingCopyBtnTwo = passElTwo.nextSibling;
+  if (existingCopyBtnTwo && existingCopyBtnTwo.tagName === "BUTTON") {
+      existingCopyBtnTwo.remove();
+  }
+
+  let length = setPassLength()
+  passElOne.textContent += generatePassword(length);
+  passElTwo.textContent += generatePassword(length);
+
+  // Create copy buttons
+  let copyBtnOne = document.createElement("button");
+  copyBtnOne.textContent = "Copy";
+  copyBtnOne.addEventListener("click", () => copyToClipboard({ target: passElOne }));
+
+  let copyBtnTwo = document.createElement("button");
+  copyBtnTwo.textContent = "Copy";
+  copyBtnTwo.addEventListener("click", () => copyToClipboard({ target: passElTwo }));
+
+  // Append copy buttons
+  passElOne.parentNode.insertBefore(copyBtnOne, passElOne.nextSibling);
+  passElTwo.parentNode.insertBefore(copyBtnTwo, passElTwo.nextSibling);
+}
