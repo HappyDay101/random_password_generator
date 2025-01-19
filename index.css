@@ -199,6 +199,12 @@ hr{
 
     .row {
         flex-direction: column; /* Stack rows */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .checkbox-container {
+        width: 100%; /* Full width */
+        margin-right: 0;
     }
 
     #select-all {
