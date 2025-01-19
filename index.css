@@ -11,6 +11,15 @@
     --body: 'Inter', sans serif;
 }
 
+body.light-mode {
+    --grey-900: #FFF;
+    --grey-800: #F3F4F6;
+    --grey-700: #E5E7EB;
+    --grey-600: #6B7280;
+    --white: #1C1C1C;
+    --primary-color-base: #3B82F6;
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -128,6 +137,7 @@ input[type="text"]{
     padding: 48px;
     margin: 48px;
     background: var(--grey-800);
+    position: relative; /* Added to position the toggle-theme button inside the container */
 }
 
 .text-green{
@@ -156,6 +166,23 @@ hr{
     background: var(--grey-700);
     height: 1px;
     border: none;
+}
+
+.toggle-theme {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    padding: 8px 16px;
+    background: var(--primary-color-base);
+    color: var(--white);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.toggle-theme:hover {
+    background-color: #2563EB; /* Darker blue */
 }
 
 /* Media queries for responsiveness */

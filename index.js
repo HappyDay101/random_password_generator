@@ -12,7 +12,7 @@ let includeLetters = document.querySelector("#include-letters");
 let includeNumbers = document.querySelector("#include-numbers");
 let includeSpecial = document.querySelector("#include-special");
 let selectAllBtn = document.querySelector("#select-all");
-
+let toggleThemeBtn = document.querySelector("#toggle-theme");
 
 //get random letter from characters array
 function randomCharacter(charSet) {
@@ -99,4 +99,8 @@ selectAllBtn.addEventListener("click", () => {
   includeLetters.checked = true;
   includeNumbers.checked = true;
   includeSpecial.checked = true;
+});
+
+toggleThemeBtn.addEventListener("click", () => {
+    document.body.classList.toggle("light-mode");
 });
