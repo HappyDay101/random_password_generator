@@ -81,3 +81,22 @@ function renderPassword() {
   passElOne.parentNode.insertBefore(copyBtnOne, passElOne.nextSibling);
   passElTwo.parentNode.insertBefore(copyBtnTwo, passElTwo.nextSibling);
 }
+
+//ability to copy to clipboard
+function copyToClipboard(e) {
+  let password = e.target;
+  navigator.clipboard.writeText(password.textContent).then(res=>{
+          console.log("Input data copied to clipboard successfully");
+      })
+}
+
+passElOne.addEventListener("click", copyToClipboard)
+passElTwo.addEventListener("click", copyToClipboard)
+
+generateBtn.addEventListener("click", renderPassword)
+
+selectAllBtn.addEventListener("click", () => {
+  includeLetters.checked = true;
+  includeNumbers.checked = true;
+  includeSpecial.checked = true;
+});
