@@ -1,18 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Random password</title>
-  <link rel="stylesheet" href="index.css">
-</head>
-<body>
-  <h1>Generate a random password</h1>
-  <p>Never use an insecure password again.</p>
-  <button>Generate passwords</button>
-  <div class="passwords">
-    <div class="passwordOutput"></div>
-    <div class="passwordOutput"></div>
-  </div>
-</body>
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <section class="container">
+            <div  class="spacing">
+                <h1>Generate a <span class="text-green"> <br>random password</span></h1>
+                <p class="subheading text-accent">Never use an insecure password again.</p>
+                <div class="row">
+                    <input type="text" id="length-value" placeholder="Password length: 10"> </input>
+                    <button id="generate"><img src="img/Icon.png">Generate Password</button>
+                </div>
+                <div class="row">
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="include-letters" checked>
+                        <label for="include-letters">Letters</label>
+                    </div>
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="include-numbers" checked>
+                        <label for="include-numbers">Numbers</label>
+                    </div>
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="include-special" checked>
+                        <label for="include-special">Special Characters</label>
+                    </div>
+                    <button id="select-all">Select All</button>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="column-left">
+                    <p class="password" id="pass-el-one"> </p>
+                </div>
+                <div class="column-right">
+                    <p class="password" id="pass-el-two"> </p>
+                </div>
+            </div>
+        <script src="index.js"></script>
+        </section>
+    </body>
 </html>
