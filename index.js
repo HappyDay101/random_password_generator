@@ -12,3 +12,22 @@ let includeLetters = document.querySelector("#include-letters");
 let includeNumbers = document.querySelector("#include-numbers");
 let includeSpecial = document.querySelector("#include-special");
 let selectAllBtn = document.querySelector("#select-all");
+
+
+//get random letter from characters array
+function randomCharacter(charSet) {
+  let randomNumber = Math.floor(Math.random() * charSet.length);
+  return charSet[randomNumber];
+}
+
+//ability to set password length
+function setPassLength() {
+  let inputValue = lengthValue.value;
+  console.log(inputValue);
+
+  //setting default
+  if (inputValue === ""){
+      return 12;
+  }
+  return inputValue;
+}
