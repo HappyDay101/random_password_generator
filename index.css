@@ -54,7 +54,6 @@ button:hover {
     background-color: #45a049; /* Darker green */
 }
 
-
 button:active {
     background-color: #3e8e41;
     /* Slightly shrink the button */
@@ -110,15 +109,15 @@ input[type="text"]{
 .column-left, .column-right{
     display: flex;
     flex-direction: column;
-    width: 100%;
-
+    width: 48%; /* Keep columns side by side */
 }
+
 .column-left{
-    margin-right: 8px;
+    margin-right: 4%;
 }
 
 .column-right{
-    margin-left: 8px;
+    margin-left: 0;
 }
 
 .spacing{
@@ -157,4 +156,87 @@ hr{
     background: var(--grey-700);
     height: 1px;
     border: none;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    .subheading {
+        font-size: 18px;
+    }
+
+    .container {
+        padding: 24px;
+        margin: 24px;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    input[type="text"] {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .checkbox-container label {
+        font-size: 14px;
+    }
+
+    .password {
+        font-size: 14px;
+    }
+
+    .column-left, .column-right {
+        width: 100%; /* Stack columns */
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .row {
+        flex-direction: column; /* Stack rows */
+    }
+
+    #select-all {
+        width: 100%; /* Expand button */
+        margin-left: 0;
+        margin-top: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    .subheading {
+        font-size: 16px;
+    }
+
+    .container {
+        padding: 16px;
+        margin: 16px;
+    }
+
+    button {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    input[type="text"] {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .checkbox-container label {
+        font-size: 12px;
+    }
+
+    .password {
+        font-size: 12px;
+    }
 }
