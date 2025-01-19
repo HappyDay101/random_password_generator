@@ -31,3 +31,20 @@ function setPassLength() {
   }
   return inputValue;
 }
+
+//generating the password
+function generatePassword(length) {
+  let charSet = "";
+  if (includeLetters.checked) charSet += characters.letters;
+  if (includeNumbers.checked) charSet += characters.numbers;
+  if (includeSpecial.checked) charSet += characters.special;
+
+  // No character type selected
+  if (charSet === "") return "";
+
+  let password = '';
+  for (let i = 0; i < length; i++){
+      password += randomCharacter(charSet);
+  }
+  return password;
+}
